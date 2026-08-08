@@ -2,7 +2,7 @@
 
 A personal portfolio website showcasing my projects, skills, and experience.
 
-🔗 Live site: jairoroosenburg.nl
+🔗 Live site: [jairoroosenburg.nl](https://jairoroosenburg.nl)
 
 ## About
 This is my personal portfolio, built to showcase my work as a software developer. It includes an overview of my projects, my background, and ways to get in touch.
