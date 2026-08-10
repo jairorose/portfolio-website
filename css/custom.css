@@ -202,7 +202,7 @@ section {
     border: 1px solid #EAEAEA;
     border-radius: 14px;
     padding: 22px 22px 26px;
-    font-family: "JetBrains Mono",monospace;
+    font-family: "JetBrains Mono", monospace;
     font-size: 0.82rem;
     box-shadow: 0 24px 60px -30px rgba(17,17,17,.18);
 }
@@ -308,7 +308,7 @@ section {
     padding: 60px 32px 32px 32px;
 }
 
-.gh-card {
+.gh-card, .lc-card {
     border-radius: 14px;
     border: 1px solid #EAEAEA;
 }
@@ -336,4 +336,106 @@ section {
 
 .project-card.soon {
     opacity: 0.55;
+}
+
+.lc-card {
+    padding: 26px 32px;
+    display: flex;
+    margin: 25px 0;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.lc-stat .num {
+    font-size: 2.1rem;
+    line-height: 1;
+    font-family: 'Manrope';
+}
+
+.lc-stat {
+    display: block;
+    border-right: 1px solid #EAEAEA;
+    padding-right: 36px;
+
+}
+
+.lc-stat .lbl {
+    font-size: 0.82rem;
+    color: #666666;
+    margin-top: 6px;
+}
+
+.lc-head {
+    margin-right: 36px;
+}
+
+.lc-split-legend {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 0.78rem;
+    color: #666666;
+    margin-top: 14px;
+}
+
+.lc-split-legend .dot {
+    display: inline-block;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    margin-right: 7px;
+}
+
+.lc-split-legend .dot.easy {
+    background: #EAEAEA;
+    border: 1px solid #D8D8D8;
+}
+
+.lc-split-legend .dot.medium {
+    background: rgba(17,17,17,0.28);
+}
+
+.lc-split-legend .dot.hard {
+    background: #2563EB;
+}
+
+.lc-split-legend {
+    display: flex;
+    gap: 20px;
+}
+
+.lc-split-bar span {
+    height: 100%;
+}
+
+.lc-split-bar {
+    display: flex;
+    height: 7px;
+    border-radius: 4px;
+    overflow: hidden;
+    background: #EAEAEA;
+}
+
+.lc-split-bar .easy {
+    background: #EAEAEA;
+    width: 75%;
+}
+
+.lc-split-bar .medium {
+    background: rgba(17,17,17,0.28);
+    width: 25%;
+}
+
+.lc-split-bar .hard {
+    background: #2563EB;
+    width: 0%;
+}
+
+.lc-split {
+    flex: 1;
+}
+
+.lc-head, .proof {
+    text-decoration: none;
+    margin-top: 10px;
+    color: #111;
 }
