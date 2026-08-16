@@ -37,6 +37,12 @@ h2 {
     padding-bottom: 22px;
 }
 
+h4 {
+    font-family: 'Manrope';
+    font-size: 0.95rem;
+    margin: 0 0 14px;
+}
+
 .hero-section {
     height: 80vh;
     gap: 64px;
@@ -308,7 +314,7 @@ section {
     padding: 60px 32px 32px 32px;
 }
 
-.gh-card, .lc-card {
+.gh-card, .lc-card, .card {
     border-radius: 14px;
     border: 1px solid #EAEAEA;
 }
@@ -478,6 +484,10 @@ h3 {
     gap: 10px;
 }
 
+.skill-card p {
+    font-size: 0.9rem;
+}
+
 .skill-card li:hover {
     color: #111;
 }
@@ -520,4 +530,50 @@ h3 {
 
 .skill-card:hover::before {
     transform: scaleX(1);
+}
+
+.card-text.note {
+    font-size: 0.82rem;
+}
+
+.req-card {
+    padding: 28px;
+}
+
+.app-preview .frame {
+    aspect-ratio: 16/10;
+    border-radius: 8px;
+    border: 1px dashed #EAEAEA;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: repeating-linear-gradient(135deg, #FAFAFA 0 10px, #F2F2F2 10px 20px);
+    color: #666666;
+    font-family: 'JetBrains Mono',monospace;
+    font-size: 0.78rem;
+    padding: 20px;
+}
+
+.status-row .mono {
+    color: #666666;
+    margin-bottom: 0;
+}
+
+.status-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #4ADE80;
+}
+
+.status-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+    gap: 10px;
+}
+
+.overview-text {
+    font-size: 1.05em;
 }
