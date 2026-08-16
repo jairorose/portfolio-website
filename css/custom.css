@@ -577,3 +577,52 @@ h3 {
 .overview-text {
     font-size: 1.05em;
 }
+
+/* BLOGS */
+
+.blog-intro h1 {
+    font-weight: 700;
+}
+
+.blog-intro {
+    padding-top: 80px;
+    padding-bottom: 30px;
+}
+
+.post-meta {
+    font-family: "Jetbrains Mono", monospace;
+    color: #666666;
+    font-size: 0.72rem;
+    display: flex;
+    gap: 14px;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.post-meta .tag {
+    font-size: 0.72rem;
+}
+
+.post-item h2 {
+    font-size: 1.25rem;
+    padding-bottom: 0;
+    margin-bottom: 12px;
+}
+
+.post-item p {
+    font-size: 0.95rem;
+    max-width: 620px;
+}
+
+.post-list {
+    border-top: 1px solid #EAEAEA;
+}
+
+.post-item {
+    border-bottom: 1px solid #EAEAEA;
+    padding: 26px 0;
+}
+
+.blog-sec {
+    padding: 20px 0;
+}
