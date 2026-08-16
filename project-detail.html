@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project</title>
+    <script type="importmap"></script>
+    <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="PortfolioWebsite.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="css/custom.css" asp-append-version="true" />
+    <link rel="icon" type="image/svg+xml" href="img/icons/favicon.svg">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="apple-touch-icon" href="img/icons/apple-touch-icon.png">
+</head>
+
+<body>
+    <header>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            <div class="containe">
+                <section>
+                    <div class="row py-4 align-items-center hero-section">
+                        <div class="col-6">
+                            <div class="status-row">
+                                <span class="status-dot"></span>
+                                <span class="mono">V{{VERSION}} — SHIPPED</span>
+                            </div>
+                            <h1 class="display-4 fw-semibold">TimeFlow — a desktop time tracker.</h1>
+                            <div class="md-6">
+                                <div class="my-4">
+                                    <p>A C# / .NET desktop application for logging hours per project and turning them into reports, without opening a spreadsheet. Built end-to-end as a shipped, installable product.</p>
+                                </div>
+                                <div class="tag-row">
+                                    <span class="tag">C#</span>
+                                    <span class="tag">.NET</span>
+                                    <span class="tag">SQLite</span>
+                                    <span class="tag">Entity Framework</span>
+                                </div>
+                                <div class="my-4 btn-row">
+                                    <a href="#" class="btn btn-primary">Download for Apple Silicon</a>
+                                    <a href="https://github.com/jairorose/TimeFlow"
+                                        class="btn btn-outline-secondary" target="_blank"
+                                        rel="noreferrer noopener">View on GitHub</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-5">
+                            <div class="code-card app-preview">
+                                <div class="dots">
+                                    <span></span><span></span><span></span>
+                                </div>
+                                <div class="frame">Screenshot or GIF of TimeFlow<br>in use goes here<br>(recommend ~1200×750, or a short screen recording)</div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <div class="row my-5 py-4 about-grid">
+                        <div class="col">
+                            <span class="mono">Overview</span>
+                            <h2>What TimeFlow Does</h2>
+                            <p class="overview-text">TimeFlow lets you log time entries against projects, then turns those entries into reports you can actually use, without needing to touch a spreadsheet. It was built as a complete, shipped desktop product rather than a code-along tutorial. Designing the data model, building the UI, and packaging a working release.</p>
+                            <p class="overview-text">The focus was on getting the fundamentals right, a clean data layer with Entity Framework Core, a local SQLite database so the app runs fully offline, and reporting logic that's kept separate from the UI so it stays easy to extend.</p>
+                        </div>
+                        <div class="col" style="width: 35%;">
+                            <ul class="list-group list-group-flush info-list">
+                                <li class="list-group-item d-flex justify-content-between align-items-start">
+                                    <span>Type</span>
+                                    <span>Desktop app ({{UI_FRAMEWORK}})</span>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-start">
+                                    <span>Platform</span>
+                                    <span>MacOS</span>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-start">
+                                    <span>Data storage</span>
+                                    <span>Local SQLite database</span>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-start">
+                                    <span>Status</span> 
+                                    <span>v{{VERSION}} shipped</span>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-start">
+                                    <span>Source</span> 
+                                    <span><a href="https://github.com/jairorose/TimeFlow" target="_blank" rel="noreferrer noopener">GitHub</a></span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <div class="row my-5 py-4">
+                        <span class="mono">Features</span>
+                        <h2>Core features</h2>
+                        <div class="row skills-grid">
+                            <div class="skill-card">
+                                <h3>Time entry tracking</h3>
+                                <p>Log hours against a project, with duration tracked and stored per entry.</p>
+                            </div>
+                            <div class="skill-card">
+                                <h3>Project organization</h3>
+                                <p>Group time entries by project so hours stay easy to find and compare.</p>
+                            </div>
+                            <div class="skill-card">
+                                <h3>Reporting</h3>
+                                <p>Summarize logged time into reports, backed by a dedicated reporting service.</p>
+                            </div>
+                            <div class="skill-card">
+                                <h3>Offline</h3>
+                                <p>No need for internet connectivity, stores data locally.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <div class="row my-5 py-5" id="projects">
+                        <div class="">
+                            <span class="mono">Tech stack</span>
+                            <h2>Built with</h2>
+                            <div class="row">
+                                <div class="col-6">
+                                    <ul class="list-group list-group-flush info-list">
+                                        <li class="list-group-item d-flex justify-content-between align-items-start">
+                                            <span>Language</span>
+                                            <span>C#</span>
+                                        </li>
+                                        <li class="list-group-item d-flex justify-content-between align-items-start">
+                                            <span>Framework</span>
+                                            <span>.NET</span>
+                                        </li>
+                                        <li class="list-group-item d-flex justify-content-between align-items-start">
+                                            <span>UI</span>
+                                            <span>{{UI_FRAMEWORK}}</span>
+                                        </li>
+                                        <li class="list-group-item d-flex justify-content-between align-items-start">
+                                            <span>ORM</span>
+                                            <span>Entity Framework Core</span>
+                                        </li>
+                                        <li class="list-group-item d-flex justify-content-between align-items-start">
+                                            <span>Database</span>
+                                            <span>SQLite</span>
+                                        </li>
+                                        <li class="list-group-item d-flex justify-content-between align-items-start">
+                                            <span>Version control</span>
+                                            <span>Git - Conventional Commits</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <div class="my-5 py-4">
+                        <span class="mono">Download</span>
+                        <h2>Get TimeFlow</h2>
+                        <div class="row">
+                            <div class="col-7">
+                                <div class="gh-feed">
+                                    <div class="bar">
+                                        <span></span><span></span><span></span>
+                                    </div>
+                                    <div class="gh-row">
+                                        <span class="time">$ ls releases/v{{VERSION}}</span>
+                                    </div>
+                                    <div class="gh-row">
+                                        <span class="repo">TimeFlow-Setup-v{{VERSION}}.exe</span>
+                                        <span class="time">{{FILE_SIZE_EXE}}</span>
+                                    </div>
+                                    <div class="gh-row">
+                                        <span class="repo">TimeFlow-Portable-v{{VERSION}}.zip</span>
+                                        <span class="time">{{FILE_SIZE_ZIP}}</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-5">
+                                <div class="card">
+                                    <div class="card-body req-card">
+                                        <div class="card-title">
+                                            <h4>System requirements</h4>
+                                        </div>
+                                        <ul class="list-group list-group-flush info-list">
+                                            <li class="list-group-item d-flex justify-content-between align-items-start">
+                                                <span>OS</span>
+                                                <span>Windows 10/11 (64-bit)</span>
+                                            </li>
+                                            <li class="list-group-item d-flex justify-content-between align-items-start">
+                                                <span>Runtime</span>
+                                                <span>.NET Desktop Runtime</span>
+                                            </li>
+                                        </ul>
+                                        <div class="btn-row">
+                                            <a href="#" target="_blank"
+                                                rel="noreferrer noopener" class="btn btn-primary" role="button">Download .exe</a>
+                                            <a href="#" target="_blank" rel="noreferrer noopener"
+                                                class="btn btn-outline-secondary">Download .zip</a>
+                                        </div>
+                                        <hr/>
+                                        <p class="card-text note">The installer isn't code-signed, so Windows SmartScreen may show a warning — expected for an unsigned indie release. Choose "More info → Run anyway" if you trust the source.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <div class="row my-5 py-4">
+                        <div class="col">
+                            <div class="contact-box">
+                                <span class="mono">Curious about the code?</span>
+                                <h2>Browse the source or see more projects.</h2>
+                                <div class="btn-row">
+                                    <a href="https://github.com/jairorose/TimeFlow" target="_blank"
+                                        rel="noreferrer noopener" class="btn btn-primary" role="button">View on GitHub</a>
+                                    <a href="#" target="_blank" rel="noreferrer noopener"
+                                        class="btn btn-outline-secondary">Back to Portfolio</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <footer class="footer text-muted">
+    </footer>
+    <script src="lib/jquery/dist/jquery.min.js"></script>
+    <script src="lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/site.js" asp-append-version="true"></script>
+</body>
+
+</html>
