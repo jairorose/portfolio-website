@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project</title>
+    <script type="importmap"></script>
+    <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="PortfolioWebsite.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="css/custom.css" asp-append-version="true" />
+    <link rel="icon" type="image/svg+xml" href="img/icons/favicon.svg">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="apple-touch-icon" href="img/icons/apple-touch-icon.png">
+</head>
+
+<body>
+    <header>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            <div class="containe">
+                <section class="article-header">
+                    <div class="row py-4 justify-content-center">
+                        <div class="col-7">
+                            <div class="post-meta">
+                                <span>Aug 2026</span>
+                                <span>•</span>
+                                <span>4 min read</span>
+                                <span class="tag">Architecture</span>
+                            </div>
+                            <h1>Why I chose SQLite for TimeFlow</h1>
+                            <div class="md-6">
+                                <div class="my-4">
+                                    <p>Short write-ups on decisions I made, bugs I fixed, and things I learned while building things and this portfolio. Mostly for future-me, shared in case it's useful to someone else too.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <article class="article-body">
+                    <p>When I started building TimeFlow, the obvious answer for "which database?" felt like SQL Server or PostgreSQL — those are the names you hear most in .NET tutorials. But neither made sense once I actually looked at what TimeFlow is: a desktop app, running on one machine, for one user, with no server to talk to.</p>
+                    <h2>What the app actually needed</h2>
+                    <p>TimeFlow needed a database that:</p>
+                    <ul>
+                        <li>Works fully offline, with no separate server process to install or run</li>
+                        <li>Ships as part of the app itself, so the installer stays simple</li>
+                        <li>Is fast enough for one user's data, without needing connection pooling or tuning</li>
+                    </ul>
+                    <p>SQLite fits all three. It's a single file on disk, the database engine is embedded directly in the app, and Entity Framework Core supports it as a first-class provider — so the data layer looks almost identical to how it would with SQL Server.</p>
+                    <h2>What it costs later</h2>
+                    <p>The trade-off is real, though. SQLite doesn't handle concurrent writes from multiple processes well, and it has no built-in way to sync data across devices. For a single-user desktop tool that's fine — but it's the reason I wouldn't reach for SQLite if TimeFlow ever became a multi-user or cloud-synced product.</p>
+                    <blockquote>The right database isn't the most "production-grade" one — it's the one that matches what the app is actually doing.</blockquote>
+                    <p>That's the bigger lesson I took from this decision: pick infrastructure for the shape of the problem you have, not the one you might have someday. It's a principle I'm carrying into how I think about the CMS behind this portfolio too.</p>
+                </article>
+                <div class="article-footer">
+                    <a href="#" class="back-link">← Back to all posts</a>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <footer class="footer text-muted">
+    </footer>
+    <script src="lib/jquery/dist/jquery.min.js"></script>
+    <script src="lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/site.js" asp-append-version="true"></script>
+</body>
+
+</html>
